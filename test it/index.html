@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <table class="top">
+        <tr>
+          <th class="logo">
+            <button class="nav-left-btn1" id="swipe-block1"></button>
+            <a><img class="logoImg" src="img/logo.png" /></a>
+          </th>
+          <th class="logo"></th>
+          <th class="logo right-block">
+            <input type="search" placeholder="Поиск" />
+          </th>
+          <th class="logo l">
+            <a class="human">
+              <img src="img/human.png" align="center" />
+              <span>Максим Галактионов</span>
+            </a>
+            <button class="setBtn"></button>
+          </th>
+        </tr>
+      </table>
+      <hr />
+    </header>
+    <div class="content">
+      <nav id="navBlock">
+        <div class="nav-left">
+          <button class="nav-left-btn" id="swipe-block">
+            <img id="buttonIMG" src="img/nav-btn-on.png" />
+          </button>
+
+          <button class="nav-left-btn">
+            <img src="img/star-btn.png" />
+          </button>
+        </div>
+        <div class="nav-right" id="nav-right-block">
+          <div class="search">
+            <input type="search" placeholder="Поиск по меню" />
+            <button class="nav-right-btn" type="submit">
+              <img src="img/nav-search-btn.png" />
+            </button>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="#">Моя работа</a></li>
+            <li><a href="#">Структура портала</a></li>
+            <li><a href="#">Личное расписание </a></li>
+            <li><a href="#">Отсутствие на рабочем месте</a></li>
+            <li><a href="#">Портфель услуг</a></li>
+            <li><a href="#">Дашборды</a></li>
+            <li><a href="#">Доски задач</a></li>
+            <li><a href="#">Обращения</a></li>
+            <li><a href="#">События</a></li>
+            <li><a href="#">Инциденты</a></li>
+            <li><a href="#">Проблемы</a></li>
+            <li><a href="#">Настройка каталогов </a></li>
+            <li><a href="#">Запросы на обслуживание</a></li>
+            <li><a href="#">Запросы на изменение</a></li>
+            <li><a href="#">Управление конфигурациями</a></li>
+            <li><a href="#">Управление уровнем услуг</a></li>
+            <li><a href="#">Настройка соответствий</a></li>
+          </ul>
+        </div>
+      </nav>
+      <main id="mainContent">
+        <div class="hat">
+          <p>Подзадача</p>
+          &nbsp;
+          <button class="hat-btn" id="creat">Создать</button>
+          <div class="right-btn-hat">
+            <button class="blue">Сохранить</button>
+            <button>Сохранить и выйти</button>
+          </div>
+        </div>
+        <div class="main-inf">
+          <b class="text">
+            STSK0004783 На инциденте, запросе, проблеме, в статусе закрыто
+            некоторые поля остаются редактируемыми для агента если он Caller
+          </b>
+          <div class="break"></div>
+
+          <form class="form">
+            <div class="form-part">
+              <label class="required">Тема</label>
+              <div class="break"></div>
+              <input
+                disabled
+                id="Subject"
+                class="main-form"
+                type="text"
+                name="Тема"
+              />
+              <div class="break"></div>
+              <div class="break"></div>
+              <label>Описание</label>
+              <div class="break"></div>
+              <input
+                disabled
+                id="Description"
+                class="main-form"
+                type="text"
+                name="Описание"
+              />
+              <div class="break"></div>
+              <div class="break"></div>
+              <label class="required">Рабочие заметки</label>
+              <div class="break"></div>
+              <input
+                disabled
+                id="WorkNotes"
+                class="main-form"
+                type="text"
+                name="Рабочие заметки"
+              />
+              <div class="break"></div>
+              <div class="break"></div>
+              <label>Ответственный</label>
+              <div class="break"></div>
+              <div class="input-btn">
+                <div
+                  contenteditable="true"
+                  id="Responsible"
+                  class="main-form exception xd"
+                  type="text"
+                  name="Ответственный"
+                ></div>
+                &nbsp;<button class="inp-btn-plus"></button>&nbsp;<button
+                  class="inp-btn-magnifier"
+                ></button>
+              </div>
+            </div>
+
+            <div class="form-part">
+              <label>Статус</label>
+              <div class="break"></div>
+              <input
+                disabled
+                id="Status"
+                class="main-form"
+                type="text"
+                name="Статус"
+              />
+              <div class="break"></div>
+              <div class="break"></div>
+              <label>Продукт</label>
+              <div class="break"></div>
+              <div class="input-btn">
+                <input
+                  disabled
+                  id="Product"
+                  class="main-form exception1"
+                  type="text"
+                  name="Продукт"
+                />&nbsp;<button class="inp-btn-magnifier"></button>
+              </div>
+              <div class="break"></div>
+              <div class="break"></div>
+              <label>Приоритет</label>
+              <div class="break"></div>
+              <input
+                disabled
+                id="Priority"
+                class="main-form"
+                type="text"
+                name="Приоритет"
+              />
+              <div class="break"></div>
+              <div class="break"></div>
+              <label>Группа</label>
+              <div class="break"></div>
+              <div class="input-btn">
+                <div
+                  contenteditable="true"
+                  id="Group"
+                  class="main-form exception"
+                  type="text"
+                  name="Группа"
+                ></div>
+                &nbsp;<button class="inp-btn-plus"></button>&nbsp;<button
+                  class="inp-btn-magnifier"
+                ></button>
+              </div>
+            </div>
+            <div class="break"></div>
+            <div class="break"></div>
+            <div style="width: 100%">
+              <label>Комментарии</label>
+            </div>
+            <div class="break"></div>
+            <div class="break1"></div>
+            <input
+              disabled
+              id="Comments"
+              style="width: 100%"
+              class="main-form"
+              type="text"
+              name="Комментарии"
+            />
+
+            <div class="break"></div>
+            <div style="width: 100%">
+              <label>Согласующие</label>
+
+              <div class="break"></div>
+              <div class="break1"></div>
+              <div class="input-btn">
+                <div
+                  contenteditable="true"
+                  id="Approvers"
+                  class="main-form textarea"
+                  type="text"
+                  style="width: 95%; resize: none"
+                  name="Согласующие"
+                  styles="max-height:100vh"
+                ></div>
+                &nbsp;<button class="inp-btn-plus"></button>&nbsp;<button
+                  class="inp-btn-magnifier"
+                ></button>
+              </div>
+            </div>
+            <div class="break"></div>
+            <div class="break"></div>
+            <div class="form-part">
+              <label>Когда открыто</label>
+              <div class="break"></div>
+              <div class="input-btn">
+                <input
+                  disabled
+                  id="openDate"
+                  class="main-form exception1"
+                  type="text"
+                  readonly
+                  name="Когда открыто"
+                />&nbsp;
+                <button class="inp-btn-calendar"></button>
+              </div>
+              <div class="break"></div>
+
+              <label>Кем открыто</label>
+              <div class="break"></div>
+              <div class="input-btn">
+                <div
+                  contenteditable="true"
+                  id="openedBy"
+                  class="main-form exception xd"
+                  type="text"
+                  name="Кем открыто"
+                ></div>
+                &nbsp;<button class="inp-btn-plus"></button>&nbsp;<button
+                  class="inp-btn-magnifier"
+                ></button>
+              </div>
+              <div class="break"></div>
+            </div>
+            <div class="form-part">
+              <label>Когда создано</label>
+              <div class="break"></div>
+              <div class="input-btn">
+                <input
+                  disabled
+                  id="CreatedDate"
+                  class="main-form-modal"
+                  type="text"
+                  readonly
+                  name="Когда создано"
+                />&nbsp;
+                <button class="inp-btn-calendar"></button>
+              </div>
+              <div class="break"></div>
+
+              <label>Кем создано</label>
+              <div class="break"></div>
+              <div class="input-btn">
+                <div
+                  contenteditable="true"
+                  id="CreatedBy"
+                  class="main-form xd"
+                  type="text"
+                  name="Кем создано"
+                ></div>
+                &nbsp;<button class="inp-btn-plus"></button>&nbsp;<button
+                  class="inp-btn-magnifier"
+                ></button>
+              </div>
+
+              <div class="break"></div>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Подзадача</h3>
+          <div class="buttons-group">
+            <button class="close mobile">&#9587</button>
+            <button class="save-btn not-mobile">Сохранить</button>
+            <button class="close not-mobile">Отмеить</button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <h2>Новая запись</h2>
+          <form class="modal-form">
+            <label class="required">Тема</label>
+            <br />
+            <input
+              id="modalSubject"
+              class="main-form-modal"
+              type="text"
+              name="Тема"
+            />
+            <br />
+            <br />
+            <label>Статус</label>
+            <br />
+            <input
+              id="modalStatus"
+              class="main-form-modal"
+              type="text"
+              name="Статус"
+            />
+            <br />
+            <br />
+            <label>Описание</label>
+            <br />
+            <input
+              id="modalDescription"
+              class="main-form-modal"
+              type="text"
+              name="Описание"
+            />
+            <br />
+            <br />
+            <label>Продукт</label>
+            <br />
+            <div class="input-btn">
+              <input
+                id="modalProduct"
+                class="main-form-modal"
+                type="text"
+                name="Продукт"
+              />&nbsp;<button class="inp-btn-magnifier"></button>
+            </div>
+
+            <br />
+            <label class="required">Рабочие заметки</label>
+            <br />
+            <input
+              id="modalWorkNotes"
+              class="main-form-modal"
+              type="text"
+              name="Рабочие заметки"
+            />
+            <br />
+            <br />
+            <label>Приоритет</label>
+            <br />
+            <input
+              id="modalPriority"
+              class="main-form-modal"
+              type="text"
+              name="Приоритет"
+            />
+            <br />
+            <br />
+            <label>Ответственный</label>
+            <br />
+            <div class="input-btn">
+              <div id="modal-responsible-badges"></div>
+              <div
+                contenteditable="true"
+                id="modalResponsible"
+                class="main-form-modal xd"
+                type="text"
+                name="Ответственный"
+              ></div>
+              &nbsp;<button class="inp-btn-plus"></button>&nbsp;<button
+                class="inp-btn-magnifier"
+              ></button>
+            </div>
+
+            <br />
+            <label>Группа</label>
+            <br />
+            <div class="input-btn">
+              <div
+                contenteditable="true"
+                id="modalGroup"
+                class="main-form-modal"
+                type="text"
+                name="Группа"
+              ></div>
+              &nbsp;<button class="inp-btn-plus"></button>&nbsp;<button
+                class="inp-btn-magnifier"
+              ></button>
+            </div>
+            <br />
+            <label>Комментарии</label>
+            <br />
+            <input
+              id="modalComments"
+              class="main-form-modal"
+              type="text"
+              name="Комментарии"
+            />
+            <br />
+            <br />
+            <label>Согласующие</label>
+            <br />
+            <div class="input-btn">
+              <div
+                contenteditable="true"
+                id="modalApprovers"
+                class="main-form textarea xd"
+                type="text"
+                style="width: 95%; resize: none"
+                name="Согласующие"
+              ></div>
+              &nbsp;<button class="inp-btn-plus"></button>&nbsp;<button
+                class="inp-btn-magnifier"
+              ></button>
+            </div>
+
+            <br />
+            <label>Когда открыто</label>
+            <br />
+            <div class="input-btn">
+              <input
+                id="modalOpenDate"
+                class="main-form-modal"
+                type="text"
+                readonly
+                name="Когда открыто"
+              />&nbsp;
+              <button class="inp-btn-calendar"></button>
+            </div>
+            <br />
+            <label>Когда создано</label>
+            <br />
+            <div class="input-btn">
+              <input
+                id="modalCreatedDate"
+                class="main-form-modal"
+                type="text"
+                readonly
+                name="Когда создано"
+              />&nbsp;
+              <button class="inp-btn-calendar"></button>
+            </div>
+            <br />
+            <br />
+            <label>Кем открыто</label>
+            <br />
+            <div class="input-btn">
+              <div
+                contenteditable="true"
+                id="modalOpenedBy"
+                class="main-form-modal xd"
+                type="text"
+                name="Кем открыто"
+              ></div>
+              &nbsp;<button class="inp-btn-plus"></button>&nbsp;<button
+                class="inp-btn-magnifier"
+              ></button>
+            </div>
+
+            <br />
+            <label>Кем создано</label>
+            <br />
+            <div class="input-btn">
+              <div
+                contenteditable="true"
+                id="modalCreatedBy"
+                class="main-form-modal xd"
+                type="text"
+                name="Кем создано"
+              ></div>
+              &nbsp;<button class="inp-btn-plus"></button>&nbsp;<button
+                class="inp-btn-magnifier"
+              ></button>
+            </div>
+           
+            <br />
+            <button class="save-btn mobile">Сохранить</button>
+            <br/>
+            <br/>
+            <button class="close x mobile">Отмеить</button>
+            <br/>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/scrol.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/dataGroup.js"></script>
+    <script>
+      const modalForms = document.querySelectorAll(".modal-form");
+
+      modalForms.forEach((form) => {
+        const dateInputs = form.querySelectorAll(
+          "input.main-form-modal[readonly]"
+        );
+
+        dateInputs.forEach((dateInput) => {
+          const calendarButton =
+            dateInput.parentNode.querySelector(".inp-btn-calendar");
+
+          if (calendarButton) {
+            const picker = flatpickr(dateInput, {
+              dateFormat: "d.m.Y",
+              clickOpens: false,
+            });
+
+            calendarButton.addEventListener("click", (event) => {
+              event.preventDefault();
+              picker.open();
+            });
+          }
+        });
+      });
+
+      const buttons = document.querySelectorAll("button");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+          event.preventDefault();
+        });
+      });
+      const divElements = document.querySelectorAll(".xd");
+
+      divElements.forEach((element) => {
+        element.addEventListener("keydown", (event) => {
+          event.preventDefault();
+        });
+      });
+      function applyResponsiveStyles() {
+        var navRightBlock = document.getElementById("nav-right-block");
+        var navBlock = document.getElementById("navBlock");
+        var buttonIMG = document.getElementById("buttonIMG");
+        var mainContent = document.getElementById("mainContent");
+        var windowWidth = window.innerWidth;
+
+        if (windowWidth >= 768 && windowWidth <= 991) {
+          navRightBlock.style.display = "none";
+          navBlock.style.borderRight = "none";
+          buttonIMG.src = "img/nav-btn-off.png";
+          mainContent.style.marginLeft = "5%";
+          mainContent.style.width = "90%";
+        } else {
+          navRightBlock.style.display = "block";
+          navBlock.style.borderRight = "1px solid #abb1ba";
+          buttonIMG.src = "img/nav-btn-on.png";
+          mainContent.style.marginLeft = "20%";
+          mainContent.style.width = "75%";
+        }
+      }
+
+      document
+        .getElementById("swipe-block")
+        .addEventListener("click", function () {
+          var navRightBlock = document.getElementById("nav-right-block");
+          var navBlock = document.getElementById("navBlock");
+          var buttonIMG = document.getElementById("buttonIMG");
+          var mainContent = document.getElementById("mainContent");
+
+          if (navRightBlock.style.display === "none") {
+            navRightBlock.style.display = "block";
+            navBlock.style.borderRight = "1px solid #abb1ba";
+            buttonIMG.src = "img/nav-btn-on.png";
+            mainContent.style.marginLeft = "20%";
+            mainContent.style.width = "75%";
+          } else {
+            navRightBlock.style.display = "none";
+            navBlock.style.borderRight = "none";
+            buttonIMG.src = "img/nav-btn-off.png";
+            mainContent.style.marginLeft = "5%";
+            mainContent.style.width = "90%";
+          }
+        });
+
+      window.addEventListener("resize", applyResponsiveStyles);
+
+      applyResponsiveStyles();
+    </script>
+  </body>
+</html>
